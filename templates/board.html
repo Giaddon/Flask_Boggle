@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+    <table class="boggle-board">
+        {% for row in board %}
+            <tr>
+                {% for letter in row %}
+                    <td>{{letter}}</td>
+                {% endfor %}
+            </tr>    
+        {% endfor %}
+    </table>
+{% endblock %}
+
+<!--[['A', 'M', 'H', 'Y', 'J'], 
+    ['H', 'P', 'N', 'U', 'M'], 
+    ['D', 'Z', 'V', 'A', 'P'], 
+    ['I', 'Q', 'T', 'X', 'C'], 
+    ['V', 'E', 'G', 'T', 'M']] -->
