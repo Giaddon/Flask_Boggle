@@ -16,14 +16,21 @@ def home():
     board = boggle_game.make_board() #this needs to go into a session
 
     session["board"] = board
-
-    print("\n\nBoard", board, "\n\n")
+    # print("\n\Session Board", session["board"], "\n\n")
 
     return render_template("board.html", board = board)
 
 @app.route("/check/",methods=["POST"])
 def check_guess():
-    print("\n \nThis is our request object \n \n",request)
-    guess = request.form.get("guess","and")
-    message = boggle_game.check_valid_word( session["board"], guess)
-    return message
+    print("\n \nThis is our json \n \n",request.json)
+
+    guess = request.json.get("guess","something")
+    result_of_valid_word_check = boggle_game.check_valid_word( session["board"], guess)
+    if result_of_valid_word_check == "not-on-board":
+        return "Word isn't on the board!"
+    elif result_of_valid_word_check == "ok":
+        return "Cool! Good job Guy"
+    else:
+        return "This isn't a word"
+
+  
