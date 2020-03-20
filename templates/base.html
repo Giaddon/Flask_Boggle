@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:wght@700&display=swap" rel="stylesheet">
     <title>BOGGLE!!!</title>
 </head>
 <body>
     {% for msg in get_flashed_messages() %}
         <div class="flash"><h3>{{msg}}</h3></div>
     {% endfor %}
-    <h1>Welcome to BOGGLE</h1>
+    <h1 class="title">Prepare to Boggle</h1>
     {% block content %}
 
     {% endblock %}

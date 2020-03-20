@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+.title {
+    font-family: sans-serif;
+    text-align: center;
+
+}
+
+.boggle-board {
+    font-family: "Cousine", monospace;
+    font-size: 32px;
+    vertical-align: middle;
+    text-align: center;
+    margin: 10px auto;
+    border: 4px double lightblue;
+}
+.boggle-board td {
+    padding: 7px 12px;
+    
+}
