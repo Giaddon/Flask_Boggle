@@ -11,7 +11,15 @@
             </tr>    
         {% endfor %}
     </table>
+
+    <form id="word-guess-form" method="POST" action="/check/">
+      <input id="word-guess-input"type="text"name="guess_word" placeholder="Guess a word!">
+      <button id="word-guess-button" type="submit">Submit!</button>
+    </form>
+    <div id="message-area"></div>
 {% endblock %}
+
+
 
 <!--[['A', 'M', 'H', 'Y', 'J'], 
     ['H', 'P', 'N', 'U', 'M'], 

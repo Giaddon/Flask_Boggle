@@ -20,3 +20,14 @@
     padding: 7px 12px;
     
 }
+
+.boggle-board td:hover {
+  background-color: rgb(163, 160, 160)
+}
+
+form {
+  /* margin: auto; */
+  margin-left: 35%;
+  width: 50%;
+}
+
